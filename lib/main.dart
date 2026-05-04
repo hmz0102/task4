@@ -16,8 +16,11 @@ void main() {
 class _StatemangementState extends State<Statemangement> {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
+        ChangeNotifierProvider(create: (context) => TodoProvider()),
+      ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
@@ -25,14 +28,21 @@ class _StatemangementState extends State<Statemangement> {
             home: Homepage(),
             themeMode: themeProvider.themeMode,
             theme: ThemeData(
-              appBarTheme: AppBarTheme(
-                backgroundColor: Colors.grey,
-                foregroundColor: Colors.white,
-                centerTitle: true,
-                titleTextStyle: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              listTileTheme: ListTileThemeData(
+                textColor: Color(0xFFADAEBC),
+                tileColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                iconColor: Color(0xFF3B82F6),
+              ),
+
+              cardTheme: CardThemeData(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                color: Colors.white,
+                elevation: 2,
               ),
               scaffoldBackgroundColor: Colors.grey[200],
               textTheme: TextTheme(
@@ -60,23 +70,23 @@ class _StatemangementState extends State<Statemangement> {
               ),
             ),
             darkTheme: ThemeData(
-              floatingActionButtonTheme: FloatingActionButtonThemeData(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
+              listTileTheme: ListTileThemeData(
+                textColor: Color(0xFFADAEBC),
+                tileColor: Color(0xFF25273D),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                iconColor: Colors.white,
               ),
-              appBarTheme: AppBarTheme(
-                backgroundColor: Colors.black,
-                foregroundColor: Colors.white,
-                centerTitle: true,
-                titleTextStyle: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+
+              cardTheme: CardThemeData(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                color: Color(0xFF25273D),
+                elevation: 2,
               ),
-              scaffoldBackgroundColor: Colors.black,
+              scaffoldBackgroundColor: Color(0xFF161622),
               textTheme: TextTheme(
                 bodyLarge: TextStyle(
                   color: Colors.white,
