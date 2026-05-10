@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:statemangement/main.dart';
+import 'package:statemangement/themes/theme.dart';
 import 'package:statemangement/functions/methods.dart';
 
 class Homepage extends StatefulWidget {
@@ -64,7 +64,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                   Positioned(
-                    top: 180,
+                    top: 200,
                     left: 20,
                     right: 20,
                     child: Card(

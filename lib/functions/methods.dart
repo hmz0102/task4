@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:statemangement/main.dart';
+import 'package:statemangement/themes/theme.dart';
 
 class TaskItem extends StatelessWidget {
   final TaskModel task;
