@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:statemangement/functions/methods.dart';
 import 'package:statemangement/pages/homepage.dart';
 
 class Statemangement extends StatefulWidget {
