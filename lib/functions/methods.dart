@@ -19,7 +19,7 @@ class TaskItem extends StatelessWidget {
           width: 24,
           height: 24,
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(5),
             border: Border.all(color: Colors.grey.shade400),
             gradient: task.isDone
                 ? LinearGradient(
