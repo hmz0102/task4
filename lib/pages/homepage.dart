@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:statemangement/themes/theme.dart';
 import 'package:statemangement/functions/methods.dart';
-import 'package:statemangement/themes/themeprovider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
